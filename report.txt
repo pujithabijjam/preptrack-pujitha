@@ -8,8 +8,8 @@ TOTAL TEAM MEMBERS:14
 
 SL.No:01
 Member  Name :Bijjam Pujitha
-PrepTrack Repository Link :
-Submission Status :
+PrepTrack Repository Link :https://github.com/pujithabijjam/preptrack-pujitha.git
+Submission Status :completed
 
 ====================================================================================================
 
@@ -35,7 +35,7 @@ Submission Status :completed
 
 SL.No:05
 Member  Name :Pachuri Kavitha
-PrepTrack Repository Link :
+PrepTrack Repository Link :https://github.com/Pachuri-Kavitha/preptrack-kavitha.git
 Submission Status :completed
 
 ====================================================================================================
@@ -48,9 +48,9 @@ Submission Status :
 ====================================================================================================
 
 SL.No:07
-Member  Name :
-PrepTrack Repository Link :
-Submission Status :
+Member  Name :Tarun Sankanagoudars
+PrepTrack Repository Link :https://github.com/tarunbs16/preptrack-Tarun
+Submission Status :completed
 
 ====================================================================================================
 
