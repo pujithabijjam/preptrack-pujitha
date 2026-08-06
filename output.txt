@@ -1,0 +1,77 @@
+==================================================
+              PREPTRACK APPLICATION
+==================================================
+Enter student name: Bijjam Pujitha
+Enter registration number: 8777
+Enter graduation year: 2026
+Enter attendance percentage: 90
+Attendance accepted.
+Has the student completed the required project?
+Enter yes or no: yes
+Is the student profile verified?
+Enter yes or no: yes
+Enter Day 1 score from 0 to 100, or -1 for absent: 90
+Score accepted.
+Day 1 Result: Strong
+Enter Day 2 score from 0 to 100, or -1 for absent: 80
+Score accepted.
+Day 2 Result: Strong
+Enter Day 3 score from 0 to 100, or -1 for absent: 85
+Score accepted.
+Day 3 Result: Strong
+Enter Day 4 score from 0 to 100, or -1 for absent: 75
+Score accepted.
+Day 4 Result: Strong
+Enter Day 5 score from 0 to 100, or -1 for absent: 50
+Score accepted.
+Day 5 Result: Needs Improvement  
+Enter Day 6 score from 0 to 100, or -1 for absent: -1
+Score accepted.
+Day 6 Result: Absent
+Enter Day 7 score from 0 to 100, or -1 for absent: 40
+Score accepted.
+Day 7 Result: Needs Improvement  
+
+==================================================
+              PREPTRACK REPORT   
+==================================================
+
+STUDENT PROFILE
+
+Student Name           : Bijjam Pujitha
+Registration Number    : 8777    
+Graduation Year        : 2026    
+Attendance             : 90.0    
+Project Completed      : True    
+Profile Verified       : True    
+
+PRACTICE SUMMARY
+
+Total Practice Days    : 7       
+Attempted Days         : 6       
+Absent Days            : 1       
+Passed Days            : 4       
+Failed Days            : 2       
+
+Strong Days             : 4      
+Satisfactory Days       : 0      
+Needs Improvement Days  : 2      
+Critical Days           : 0      
+
+PERFORMANCE ANALYSIS
+
+Total Score            : 420     
+Average Score          : 70.00   
+Highest Score          : 90      
+Highest Score Day      : 1       
+Lowest Score           : 40      
+Lowest Score Day       : 7       
+
+First Critical Score   : Not Available
+
+FINAL DECISION
+
+Final Status           : Ready for Mock Interviews
+Primary Blocker        : None
+Next Action            : Proceed to placement mock interviews
+==================================================
