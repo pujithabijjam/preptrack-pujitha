@@ -70,8 +70,8 @@ Submission Status :completed
 
 SL.No:10
 Member  Name :Syed Ubada
-PrepTrack Repository Link :
-Submission Status :pending
+PrepTrack Repository Link :https://github.com/ubada-devops/prptrack-ubada 
+Submission Status :completed
 
 ====================================================================================================
 
