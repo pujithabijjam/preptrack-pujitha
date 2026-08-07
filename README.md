@@ -1,4 +1,4 @@
-# preptrack-syna
+# preptrack-pujitha
 # PrepTrack — Placement Preparation Performance Analyzer
 
 ## Project Title
@@ -9,9 +9,11 @@
 
 # Project Overview
 
-PrepTrack is a Python console application developed to analyze a student's placement preparation performance and determine interview readiness. The application collects student information such as student name, registration number, graduation year, attendance percentage, project completion status, profile verification status, and seven days of coding practice scores.
+prepTrack is a Python-based console application developed to evaluate a student's placement preparation and determine their readiness for a placement mock interview. The application collects validated student information, including the student name, registration number, graduation year, attendance percentage, project completion status, profile verification status, and seven daily coding-practice scores. It validates every user input before processing and analyzes the student's performance using predefined evaluation criteria.
 
-The program performs input validation, classifies daily practice scores into performance categories, tracks attendance and coding practice statistics, identifies the highest and lowest scores without using lists or built-in functions, detects the first critical performance day, calculates the average score, and determines placement readiness using a priority-based decision system.
+The application classifies daily coding-practice scores into Strong, Satisfactory, Needs Improvement, and Critical categories while tracking important performance metrics such as attempted days, absent days, passed days, failed days, highest score, lowest score, average score, and the first critical score. Based on these results, it evaluates placement eligibility using attendance, graduation year, coding performance, project completion, and profile verification. Finally, the program generates a comprehensive PREPTRACK REPORT containing the Student Profile, Practice Summary, Performance Analysis, Critical Score Information, and Final Decision. The project is implemented entirely using core Python programming concepts without using lists, tuples, or built-in aggregation functions.
+
+
 
 Finally, the application generates a detailed report showing the student's performance summary, analytics, critical score information, final placement status, primary blocker, and the next recommended action.
 
@@ -148,66 +150,116 @@ python main.py
 ==================================================
              PREPTRACK APPLICATION
 ==================================================
-
-Enter student name: Syna
-Enter registration number: PY4209
+Enter student name: Bijjam Pujitha
+Enter registration number: 8777
 Enter graduation year: 2026
-Enter attendance percentage: 85
-Has the student completed the required project? Enter yes or no: yes
-Is the student profile verified? Enter yes or no: yes
-
+Enter attendance percentage: 90
+Attendance accepted.
+Has the student completed the required project?
+Enter yes or no: yes
+Is the student profile verified?
+Enter yes or no: yes
 Enter Day 1 score from 0 to 100, or -1 for absent: 90
+Score accepted.
 Day 1 Result: Strong
-
-Enter Day 2 score from 0 to 100, or -1 for absent: 75
+Enter Day 2 score from 0 to 100, or -1 for absent: 80
+Score accepted.
 Day 2 Result: Strong
-
-Enter Day 3 score from 0 to 100, or -1 for absent: 68
-Day 3 Result: Satisfactory
-
-Enter Day 4 score from 0 to 100, or -1 for absent: 80
+Enter Day 3 score from 0 to 100, or -1 for absent: 85
+Score accepted.
+Day 3 Result: Strong
+Enter Day 4 score from 0 to 100, or -1 for absent: 75
+Score accepted.
 Day 4 Result: Strong
-
-Enter Day 5 score from 0 to 100, or -1 for absent: 60
-Day 5 Result: Satisfactory
-
+Enter Day 5 score from 0 to 100, or -1 for absent: 50
+Score accepted.
+Day 5 Result: Needs Improvement  
 Enter Day 6 score from 0 to 100, or -1 for absent: -1
+Score accepted.
 Day 6 Result: Absent
+Enter Day 7 score from 0 to 100, or -1 for absent: 40
+Score accepted.
+Day 7 Result: Needs Improvement  
 
-Enter Day 7 score from 0 to 100, or -1 for absent: 45
-Day 7 Result: Needs Improvement
+==================================================
+              PREPTRACK REPORT   
+==================================================
+
+STUDENT PROFILE
+
+Student Name           : Bijjam Pujitha
+Registration Number    : 8777    
+Graduation Year        : 2026    
+Attendance             : 90.0    
+Project Completed      : True    
+Profile Verified       : True    
+
+PRACTICE SUMMARY
+
+Total Practice Days    : 7       
+Attempted Days         : 6       
+Absent Days            : 1       
+Passed Days            : 4       
+Failed Days            : 2       
+
+Strong Days             : 4      
+Satisfactory Days       : 0      
+Needs Improvement Days  : 2      
+Critical Days           : 0      
+
+PERFORMANCE ANALYSIS
+
+Total Score            : 420     
+Average Score          : 70.00   
+Highest Score          : 90      
+Highest Score Day      : 1       
+Lowest Score           : 40      
+Lowest Score Day       : 7       
+
+First Critical Score   : Not Available
+
+FINAL DECISION
+
+Final Status           : Ready for Mock Interviews
+Primary Blocker        : None
+Next Action            : Proceed to placement mock interviews
 ```
 
 ---
 
 # Test Result Summary
 
-| Test ID | Scenario                | Expected Result                   | Actual Result       | Status |
-| ------- | ----------------------- | --------------------------------- | ------------------- | ------ |
-| TC-01   | Valid student details   | Accepted                          | Accepted            | ✅ Pass |
-| TC-02   | Empty student name      | Prompt again                      | Prompt again        | ✅ Pass |
-| TC-03   | Invalid graduation year | Prompt again                      | Prompt again        | ✅ Pass |
-| TC-04   | Invalid attendance      | Prompt again                      | Prompt again        | ✅ Pass |
-| TC-05   | Invalid project input   | Boolean conversion                | Converted correctly | ✅ Pass |
-| TC-06   | Invalid profile input   | Boolean conversion                | Converted correctly | ✅ Pass |
-| TC-07   | Invalid score           | Prompt again                      | Prompt again        | ✅ Pass |
-| TC-08   | Absent day (-1)         | Skip processing                   | Process skipped     | ✅ Pass |
-| TC-09   | Highest & Lowest Score  | Correct values displayed          | Correct             | ✅ Pass |
-| TC-10   | Average Score           | Calculated correctly              | Correct             | ✅ Pass |
-| TC-11   | First Critical Score    | Stored correctly                  | Correct             | ✅ Pass |
-| TC-12   | No practice attempted   | Appropriate status                | Correct             | ✅ Pass |
-| TC-13   | Placement Ready         | Ready for Mock Interview          | Correct             | ✅ Pass |
-| TC-14   | Multiple blockers       | Highest priority blocker selected | Correct             | ✅ Pass |
++----+----------------------------------+-------------------------------+--------+
+| No | Test Case                        | Result                        | Status |
++----+----------------------------------+-------------------------------+--------+
+| 1  | Student Name Validation          | Successfully Validated        | PASS   |
+| 2  | Registration Number Input        | Successfully Recorded         | PASS   |
+| 3  | Graduation Year Validation       | 2026 Accepted                 | PASS   |
+| 4  | Attendance Validation            | 90% Accepted                  | PASS   |
+| 5  | Project Completion Validation    | Yes Accepted                  | PASS   |
+| 6  | Profile Verification Validation  | Yes Accepted                  | PASS   |
+| 7  | Score Validation                 | Valid Scores Accepted         | PASS   |
+| 8  | Seven-Day Practice Processing    | Successfully Processed        | PASS   |
+| 9  | Absence Handling                 | 1 Absent Day Recorded         | PASS   |
+| 10 | Performance Classification       | Correctly Classified          | PASS   |
+| 11 | Highest Score Tracking           | 90 (Day 1)                    | PASS   |
+| 12 | Lowest Score Tracking            | 40 (Day 7)                    | PASS   |
+| 13 | Average Score Calculation        | 70.00                         | PASS   |
+| 14 | Critical Score Detection         | No Critical Score Found       | PASS   |
+| 15 | Placement Readiness Evaluation   | Ready for Mock Interviews     | PASS   |
+| 16 | Final Report Generation          | Successfully Generated        | PASS   |
++----+----------------------------------+-------------------------------+--------+
+
 
 ---
 
 # Individual Contribution
 
-**Name:** Syna Begum
+**Name:** Bijjam Pujitha
 
 **Repository URL:**
+https://github.com/pujithabijjam/preptrack-pujitha.git
 
-https://github.com/yourusername/preptrack
 
 ### My Main Contribution
 
@@ -256,7 +308,7 @@ Used a Boolean flag (`first_attempt_found`) to initialize the first valid score 
 
 # Code Review Completed
 
-Reviewed Member: Poojitha
+Reviewed Member: Syna
 
 **Repository URL:**
 
@@ -280,11 +332,13 @@ Use a validation loop for both project completion and profile verification input
 
 # Feedback Received
 
-**Reviewed By:** Poojitha
+**Reviewed By:** Syna
 
 ### Feedback Received
 
-Implement a validation loop for project completion and profile verification to prevent invalid user inputs.
+During the project review, it was observed that the final_status values in the placement decision logic did not exactly match the status names specified in the Project Requirements Document (PRD). Some conditions reused incorrect status messages, while others used wording that differed from the required specification. The reviewer recommended updating all final_status assignments to use the exact PRD-defined status names, including Insufficient Passed Practices, Practice Improvement Required, Graduation Criteria Not Met, and Application On Hold where applicable. This feedback was provided to ensure consistency between the implementation and the project requirements, improve report accuracy, and enable both manual and automated test cases to validate the application using the expected output strings.
+
+
 
 ### Was the Feedback Valid?
 
@@ -304,4 +358,4 @@ Improve input validation for project and profile verification
 
 # Improvement Made After Review
 
-Enhanced the project by strengthening input validation for project completion and profile verification fields. Improved overall user experience by preventing invalid responses and ensuring only accepted values are processed. Also verified that average scores are displayed with two decimal places and absent days are correctly excluded from score calculations.
+Based on the review feedback, the placement decision logic was refined to align completely with the Project Requirements Document (PRD). All final_status values were updated to use the exact status names specified in the PRD, ensuring consistency between the application output and the project requirements. The status messages for Insufficient Passed Practices, Practice Improvement Required, Graduation Criteria Not Met, and Application On Hold were corrected wherever necessary. These improvements enhanced the accuracy of the final report, ensured compliance with the project specification, and improved the reliability of both manual and automated test case validation.
