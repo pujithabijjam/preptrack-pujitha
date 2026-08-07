@@ -41,9 +41,9 @@ Submission Status :completed
 ====================================================================================================
 
 SL.No:06
-Member  Name :
-PrepTrack Repository Link :
-Submission Status :
+Member  Name :Bukkambudi Manoj Kumar
+PrepTrack Repository Link :https://github.com/manojmanu916/preptrack-Manoj-Kumar.git
+Submission Status :completed
 
 ====================================================================================================
 
@@ -62,43 +62,43 @@ Submission Status :completed
 ====================================================================================================
 
 SL.No:09
-Member  Name :
+Member  Name :N.Sreelatha
 PrepTrack Repository Link :
-Submission Status :
+Submission Status :completed
 
 ====================================================================================================
 
 SL.No:10
-Member  Name :
+Member  Name :Syed Ubada
 PrepTrack Repository Link :
-Submission Status :
+Submission Status :completed
 
 ====================================================================================================
 
 SL.No:11
-Member  Name :
+Member  Name :Dudekula Syna Begum
 PrepTrack Repository Link :
-Submission Status :
+Submission Status :completed
 
 ====================================================================================================
 
 SL.No:12
-Member  Name :
+Member  Name :Jayadithya Kuppam
 PrepTrack Repository Link :
-Submission Status :
+Submission Status :completed
 
 ====================================================================================================
 
 SL.No:13
-Member  Name :
+Member  Name :Kurnoothala Bhanu Moorthy
 PrepTrack Repository Link :
-Submission Status :
+Submission Status :completed
 
 ====================================================================================================
 
 SL.No:14
-Member  Name :
+Member  Name :Rami Reddy Maruthi Mohan Reddy
 PrepTrack Repository Link :
-Submission Status :
+Submission Status :completed
 
 ====================================================================================================
