@@ -229,26 +229,23 @@ Next Action            : Proceed to placement mock interviews
 
 # Test Result Summary
 
-+----+----------------------------------+-------------------------------+--------+
-| No | Test Case                        | Result                        | Status |
-+----+----------------------------------+-------------------------------+--------+
-| 1  | Student Name Validation          | Successfully Validated        | PASS   |
-| 2  | Registration Number Input        | Successfully Recorded         | PASS   |
-| 3  | Graduation Year Validation       | 2026 Accepted                 | PASS   |
-| 4  | Attendance Validation            | 90% Accepted                  | PASS   |
-| 5  | Project Completion Validation    | Yes Accepted                  | PASS   |
-| 6  | Profile Verification Validation  | Yes Accepted                  | PASS   |
-| 7  | Score Validation                 | Valid Scores Accepted         | PASS   |
-| 8  | Seven-Day Practice Processing    | Successfully Processed        | PASS   |
-| 9  | Absence Handling                 | 1 Absent Day Recorded         | PASS   |
-| 10 | Performance Classification       | Correctly Classified          | PASS   |
-| 11 | Highest Score Tracking           | 90 (Day 1)                    | PASS   |
-| 12 | Lowest Score Tracking            | 40 (Day 7)                    | PASS   |
-| 13 | Average Score Calculation        | 70.00                         | PASS   |
-| 14 | Critical Score Detection         | No Critical Score Found       | PASS   |
-| 15 | Placement Readiness Evaluation   | Ready for Mock Interviews     | PASS   |
-| 16 | Final Report Generation          | Successfully Generated        | PASS   |
-+----+----------------------------------+-------------------------------+--------+
+| Test ID | Scenario                | Expected Result                   | Actual Result       | Status |
+| ------- | ----------------------- | --------------------------------- | ------------------- | ------ |
+| TC-01   | Valid student details   | Accepted                          | Accepted            | ✅ Pass |
+| TC-02   | Empty student name      | Prompt again                      | Prompt again        | ✅ Pass |
+| TC-03   | Invalid graduation year | Prompt again                      | Prompt again        | ✅ Pass |
+| TC-04   | Invalid attendance      | Prompt again                      | Prompt again        | ✅ Pass |
+| TC-05   | Invalid project input   | Boolean conversion                | Converted correctly | ✅ Pass |
+| TC-06   | Invalid profile input   | Boolean conversion                | Converted correctly | ✅ Pass |
+| TC-07   | Invalid score           | Prompt again                      | Prompt again        | ✅ Pass |
+| TC-08   | Absent day (-1)         | Skip processing                   | Process skipped     | ✅ Pass |
+| TC-09   | Highest & Lowest Score  | Correct values displayed          | Correct             | ✅ Pass |
+| TC-10   | Average Score           | Calculated correctly              | Correct             | ✅ Pass |
+| TC-11   | First Critical Score    | Stored correctly                  | Correct             | ✅ Pass |
+| TC-12   | No practice attempted   | Appropriate status                | Correct             | ✅ Pass |
+| TC-13   | Placement Ready         | Ready for Mock Interview          | Correct             | ✅ Pass |
+| TC-14   | Multiple blockers       | Highest priority blocker selected | Correct             | ✅ Pass |
+
 
 
 ---
