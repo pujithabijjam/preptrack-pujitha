@@ -63,7 +63,7 @@ Submission Status :completed
 
 SL.No:09
 Member  Name :N.Sreelatha
-PrepTrack Repository Link :
+PrepTrack Repository Link :https://github.com/Naresreelatha01/preptrack-sreelatha
 Submission Status :completed
 
 ====================================================================================================
@@ -71,27 +71,27 @@ Submission Status :completed
 SL.No:10
 Member  Name :Syed Ubada
 PrepTrack Repository Link :
-Submission Status :completed
+Submission Status :pending
 
 ====================================================================================================
 
 SL.No:11
 Member  Name :Dudekula Syna Begum
-PrepTrack Repository Link :
+PrepTrack Repository Link :https://github.com/Synabegum/preptrack-syna.git
 Submission Status :completed
 
 ====================================================================================================
 
 SL.No:12
 Member  Name :Jayadithya Kuppam
-PrepTrack Repository Link :
+PrepTrack Repository Link :https://github.com/jayadithyakuppam/preptrack-jayadithya
 Submission Status :completed
 
 ====================================================================================================
 
 SL.No:13
 Member  Name :Kurnoothala Bhanu Moorthy
-PrepTrack Repository Link :
+PrepTrack Repository Link :https://github.com/Bhanumoorthy/prrptrack-bhanu.git
 Submission Status :completed
 
 ====================================================================================================
@@ -99,6 +99,6 @@ Submission Status :completed
 SL.No:14
 Member  Name :Rami Reddy Maruthi Mohan Reddy
 PrepTrack Repository Link :
-Submission Status :completed
+Submission Status :pending
 
 ====================================================================================================
