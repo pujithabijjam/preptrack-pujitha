@@ -1,262 +1,307 @@
-# preptrack-pujitha
-Project Title
+# preptrack-syna
+# PrepTrack — Placement Preparation Performance Analyzer
 
-PrepTrack — Placement Preparation Performance Analyzer
+## Project Title
 
-Project Overview
+**PrepTrack — Placement Preparation Performance Analyzer**
 
-PrepTrack is a Python-based console application developed to evaluate a student's placement preparation and determine their readiness for a placement mock interview. The application collects validated student information, including the student name, registration number, graduation year, attendance percentage, project completion status, profile verification status, and seven daily coding-practice scores. It validates every user input before processing and analyzes the student's performance using predefined evaluation criteria.
+---
 
-The application classifies daily coding-practice scores into Strong, Satisfactory, Needs Improvement, and Critical categories while tracking important performance metrics such as attempted days, absent days, passed days, failed days, highest score, lowest score, average score, and the first critical score. Based on these results, it evaluates placement eligibility using attendance, graduation year, coding performance, project completion, and profile verification. Finally, the program generates a comprehensive PREPTRACK REPORT containing the Student Profile, Practice Summary, Performance Analysis, Critical Score Information, and Final Decision. The project is implemented entirely using core Python programming concepts without using lists, tuples, or built-in aggregation functions.
+# Project Overview
 
-Objectives
+PrepTrack is a Python console application developed to analyze a student's placement preparation performance and determine interview readiness. The application collects student information such as student name, registration number, graduation year, attendance percentage, project completion status, profile verification status, and seven days of coding practice scores.
 
-Collect and validate student information.
-Process seven days of coding-practice scores.
-Classify daily performance into different categories.
-Track practice statistics and score analytics.
-Evaluate placement readiness using multiple eligibility conditions.
-Generate a structured placement performance report.
+The program performs input validation, classifies daily practice scores into performance categories, tracks attendance and coding practice statistics, identifies the highest and lowest scores without using lists or built-in functions, detects the first critical performance day, calculates the average score, and determines placement readiness using a priority-based decision system.
 
-Features Implemented
+Finally, the application generates a detailed report showing the student's performance summary, analytics, critical score information, final placement status, primary blocker, and the next recommended action.
 
-Student Details Processing
-Student name validation
-Registration number input
-Graduation year validation
-Attendance percentage validation
-Project completion verification
-Profile verification
+---
 
-Coding Practice Processing
+# Features Implemented
 
-Seven-day practice evaluation
-Score validation (0–100 or -1 for absent)
-Absence handling
-Daily performance classification
-Attempted and absent day tracking
-Passed and failed day counting
+## Student Details Processing
 
-Performance Analysis
+* Validates that the student name is not empty.
+* Collects the registration number.
+* Validates graduation year within the eligible range (2025–2027).
+* Validates attendance percentage between 0 and 100.
+* Accepts only **yes** or **no** for project completion.
+* Converts project completion input into Boolean values.
+* Accepts only **yes** or **no** for profile verification.
+* Converts profile verification input into Boolean values.
 
-Total score calculation
-Average score calculation
-Highest score tracking
-Lowest score tracking
-Critical score detection
-First critical day identification
+---
 
-Placement Readiness Evaluation
+## Practice Score Processing
 
-Graduation year eligibility
-Attendance eligibility
-Practice completion verification
-Average score evaluation
-Critical score verification
-Passed day verification
-Project completion check
-Profile verification check
+* Processes seven days of coding practice.
+* Validates scores between **0–100** or **-1** for absent.
+* Uses **continue** to skip processing for absent days.
+* Tracks:
 
-Final Report Generation
+  * Attempted Days
+  * Absent Days
+  * Passed Days
+  * Failed Days
+* Classifies daily scores into:
 
-Student Profile
-Practice Summary
-Performance Analysis
-Critical Score Information
-Final Placement Decision
+  * Strong (75–100)
+  * Satisfactory (60–74)
+  * Needs Improvement (40–59)
+  * Critical (0–39)
 
-Python Concepts Used
+---
 
-Input and Output
-Variables
-Data Types
-Type Casting
-Conditional Statements
-Boolean Expressions
-While Loop
-For Loop
-Range Function
-Break Statement
-Continue Statement
-Counters and Accumulators
-Arithmetic Operators
-Relational Operators
-Logical Operators
-f-Strings
-String Formatting
+## Performance Analysis
 
-Technologies Used
+* Calculates total score.
+* Calculates average score with division-by-zero protection.
+* Tracks highest score and the day achieved.
+* Tracks lowest score and the day achieved.
+* Ignores absent days while calculating statistics.
+* Detects the first critical score.
+* Stores:
 
-Python 3
-Visual Studio Code
-Command Line / Terminal
+  * First Critical Day
+  * First Critical Score
 
-How to Run the Project
+---
 
+## Placement Readiness Evaluation
+
+Uses a priority-based decision system to determine placement readiness.
+
+Decision priorities include:
+
+1. No practice attempted
+2. Critical score detected
+3. Practice incomplete
+4. Insufficient passed practices
+5. Average score below requirement
+6. Attendance below requirement
+7. Graduation year not eligible
+8. Project incomplete
+9. Profile not verified
+10. Ready for Mock Interview
+
+---
+
+## Final Report Generation
+
+Displays:
+
+* Student Details
+* Practice Summary
+* Performance Analysis
+* Critical Score Information
+* Final Placement Decision
+* Primary Blocker
+* Next Recommended Action
+
+---
+
+# Python Concepts Used
+
+* Basic Input and Output (`input()`, `print()`)
+* Variables
+* Primitive Data Types
+
+  * String
+  * Integer
+  * Float
+  * Boolean
+* Type Casting
+* Conditional Statements
+
+  * if
+  * elif
+  * else
+* Boolean Expressions
+* while Loops
+* for Loops
+* range()
+* break
+* continue
+* Accumulators
+* Counters
+* Nested Conditions
+* Comparison Operators
+* Logical Operators (`and`, `or`, `not`)
+* Formatted Strings (f-strings)
+* Boolean Flag Variables
+
+---
+
+# Instructions to Run the Program
+
+Run the application using:
+
+```bash
 python main.py
+```
 
-or
+---
 
-python3 main.py
+# Sample Output
 
-Sample Output
-
+```
 ==================================================
-              PREPTRACK APPLICATION
+             PREPTRACK APPLICATION
 ==================================================
-Enter student name: Bijjam Pujitha
-Enter registration number: 8777
+
+Enter student name: Syna
+Enter registration number: PY4209
 Enter graduation year: 2026
-Enter attendance percentage: 90
-Attendance accepted.
-Has the student completed the required project?
-Enter yes or no: yes
-Is the student profile verified?
-Enter yes or no: yes
+Enter attendance percentage: 85
+Has the student completed the required project? Enter yes or no: yes
+Is the student profile verified? Enter yes or no: yes
+
 Enter Day 1 score from 0 to 100, or -1 for absent: 90
-Score accepted.
 Day 1 Result: Strong
-Enter Day 2 score from 0 to 100, or -1 for absent: 80
-Score accepted.
+
+Enter Day 2 score from 0 to 100, or -1 for absent: 75
 Day 2 Result: Strong
-Enter Day 3 score from 0 to 100, or -1 for absent: 85
-Score accepted.
-Day 3 Result: Strong
-Enter Day 4 score from 0 to 100, or -1 for absent: 75
-Score accepted.
+
+Enter Day 3 score from 0 to 100, or -1 for absent: 68
+Day 3 Result: Satisfactory
+
+Enter Day 4 score from 0 to 100, or -1 for absent: 80
 Day 4 Result: Strong
-Enter Day 5 score from 0 to 100, or -1 for absent: 50
-Score accepted.
-Day 5 Result: Needs Improvement  
+
+Enter Day 5 score from 0 to 100, or -1 for absent: 60
+Day 5 Result: Satisfactory
+
 Enter Day 6 score from 0 to 100, or -1 for absent: -1
-Score accepted.
 Day 6 Result: Absent
-Enter Day 7 score from 0 to 100, or -1 for absent: 40
-Score accepted.
-Day 7 Result: Needs Improvement  
 
-==================================================
-              PREPTRACK REPORT   
-==================================================
+Enter Day 7 score from 0 to 100, or -1 for absent: 45
+Day 7 Result: Needs Improvement
+```
 
-STUDENT PROFILE
+---
 
-Student Name           : Bijjam Pujitha
-Registration Number    : 8777    
-Graduation Year        : 2026    
-Attendance             : 90.0    
-Project Completed      : True    
-Profile Verified       : True    
+# Test Result Summary
 
-PRACTICE SUMMARY
+| Test ID | Scenario                | Expected Result                   | Actual Result       | Status |
+| ------- | ----------------------- | --------------------------------- | ------------------- | ------ |
+| TC-01   | Valid student details   | Accepted                          | Accepted            | ✅ Pass |
+| TC-02   | Empty student name      | Prompt again                      | Prompt again        | ✅ Pass |
+| TC-03   | Invalid graduation year | Prompt again                      | Prompt again        | ✅ Pass |
+| TC-04   | Invalid attendance      | Prompt again                      | Prompt again        | ✅ Pass |
+| TC-05   | Invalid project input   | Boolean conversion                | Converted correctly | ✅ Pass |
+| TC-06   | Invalid profile input   | Boolean conversion                | Converted correctly | ✅ Pass |
+| TC-07   | Invalid score           | Prompt again                      | Prompt again        | ✅ Pass |
+| TC-08   | Absent day (-1)         | Skip processing                   | Process skipped     | ✅ Pass |
+| TC-09   | Highest & Lowest Score  | Correct values displayed          | Correct             | ✅ Pass |
+| TC-10   | Average Score           | Calculated correctly              | Correct             | ✅ Pass |
+| TC-11   | First Critical Score    | Stored correctly                  | Correct             | ✅ Pass |
+| TC-12   | No practice attempted   | Appropriate status                | Correct             | ✅ Pass |
+| TC-13   | Placement Ready         | Ready for Mock Interview          | Correct             | ✅ Pass |
+| TC-14   | Multiple blockers       | Highest priority blocker selected | Correct             | ✅ Pass |
 
-Total Practice Days    : 7       
-Attempted Days         : 6       
-Absent Days            : 1       
-Passed Days            : 4       
-Failed Days            : 2       
+---
 
-Strong Days             : 4      
-Satisfactory Days       : 0      
-Needs Improvement Days  : 2      
-Critical Days           : 0      
+# Individual Contribution
 
-PERFORMANCE ANALYSIS
+**Name:** Syna Begum
 
-Total Score            : 420     
-Average Score          : 70.00   
-Highest Score          : 90      
-Highest Score Day      : 1       
-Lowest Score           : 40      
-Lowest Score Day       : 7       
+**Repository URL:**
 
-First Critical Score   : Not Available
+https://github.com/yourusername/preptrack
 
-FINAL DECISION
+### My Main Contribution
 
-Final Status           : Ready for Mock Interviews
-Primary Blocker        : None
-Next Action            : Proceed to placement mock interviews
-==================================================
+Implemented the complete Python application including student profile validation, attendance verification, coding practice evaluation, performance analysis, eligibility checking, priority-based placement decision logic, and final report generation.
 
+### Features Implemented
 
-Project Outcome
+* Student input validation
+* Graduation year validation
+* Attendance validation
+* Project and profile verification
+* Seven-day coding practice analysis
+* Score classification
+* Highest and lowest score tracking
+* Critical score detection
+* Average score calculation
+* Placement eligibility logic
+* Final report generation
 
-The PrepTrack application successfully evaluates a student's placement preparation by validating inputs, analyzing coding-practice performance, identifying strengths and weaknesses, tracking critical performance indicators, and generating a detailed placement readiness report. It provides clear feedback and recommendations that help students understand their current preparation level and the improvements required before attending placement mock interviews.
-==================================================
-              PREPTRACK APPLICATION
-==================================================
-Enter student name: Bijjam Pujitha
-Enter registration number: 8777
-Enter graduation year: 2026
-Enter attendance percentage: 90
-Attendance accepted.
-Has the student completed the required project?
-Enter yes or no: yes
-Is the student profile verified?
-Enter yes or no: yes
-Enter Day 1 score from 0 to 100, or -1 for absent: 90
-Score accepted.
-Day 1 Result: Strong
-Enter Day 2 score from 0 to 100, or -1 for absent: 80
-Score accepted.
-Day 2 Result: Strong
-Enter Day 3 score from 0 to 100, or -1 for absent: 85
-Score accepted.
-Day 3 Result: Strong
-Enter Day 4 score from 0 to 100, or -1 for absent: 75
-Score accepted.
-Day 4 Result: Strong
-Enter Day 5 score from 0 to 100, or -1 for absent: 50
-Score accepted.
-Day 5 Result: Needs Improvement  
-Enter Day 6 score from 0 to 100, or -1 for absent: -1
-Score accepted.
-Day 6 Result: Absent
-Enter Day 7 score from 0 to 100, or -1 for absent: 40
-Score accepted.
-Day 7 Result: Needs Improvement  
+### Python Concepts Used
 
-==================================================
-              PREPTRACK REPORT   
-==================================================
+* while loop
+* for loop
+* if-elif-else
+* break
+* continue
+* Boolean expressions
+* Accumulators
+* Counters
+* Type casting
+* f-strings
 
-STUDENT PROFILE
+### Most Difficult Logic
 
-Student Name           : Bijjam Pujitha
-Registration Number    : 8777    
-Graduation Year        : 2026    
-Attendance             : 90.0    
-Project Completed      : True    
-Profile Verified       : True    
+Tracking the highest and lowest scores while ignoring absent days without using Python lists or built-in `max()` and `min()` functions.
 
-PRACTICE SUMMARY
+### Problem Faced
 
-Total Practice Days    : 7       
-Attempted Days         : 6       
-Absent Days            : 1       
-Passed Days            : 4       
-Failed Days            : 2       
+Ensuring that absent days (`-1`) were excluded from score calculations while maintaining accurate statistics.
 
-Strong Days             : 4      
-Satisfactory Days       : 0      
-Needs Improvement Days  : 2      
-Critical Days           : 0      
+### Solution
 
-PERFORMANCE ANALYSIS
+Used a Boolean flag (`first_attempt_found`) to initialize the first valid score and updated highest and lowest scores only for attempted practice days.
 
-Total Score            : 420     
-Average Score          : 70.00   
-Highest Score          : 90      
-Highest Score Day      : 1       
-Lowest Score           : 40      
-Lowest Score Day       : 7       
+---
 
-First Critical Score   : Not Available
+# Code Review Completed
 
-FINAL DECISION
+Reviewed Member: Poojitha
 
-Final Status           : Ready for Mock Interviews
-Primary Blocker        : None
-Next Action            : Proceed to placement mock interviews
-==================================================
+**Repository URL:**
+
+https://github.com/Salman-S7/python-june-offline/blob/main/conditionals-loops-inputs/PRD.md
+
+### What Was Done Well
+
+* Input validation worked correctly.
+* Practice analysis was accurate.
+* Highest and lowest score tracking ignored absent days.
+
+### Issue Identified
+
+The profile verification input validation can be improved by repeatedly prompting until the user enters **yes** or **no**.
+
+### Suggested Improvement
+
+Use a validation loop for both project completion and profile verification inputs.
+
+---
+
+# Feedback Received
+
+**Reviewed By:** Poojitha
+
+### Feedback Received
+
+Implement a validation loop for project completion and profile verification to prevent invalid user inputs.
+
+### Was the Feedback Valid?
+
+Yes.
+
+### Change Made
+
+Added a while loop to repeatedly ask the user until a valid **yes** or **no** response is entered.
+
+### Commit Message Used
+
+```
+Improve input validation for project and profile verification
+```
+
+---
+
+# Improvement Made After Review
+
+Enhanced the project by strengthening input validation for project completion and profile verification fields. Improved overall user experience by preventing invalid responses and ensuring only accepted values are processed. Also verified that average scores are displayed with two decimal places and absent days are correctly excluded from score calculations.
