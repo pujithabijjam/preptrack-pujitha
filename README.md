@@ -309,7 +309,7 @@ Reviewed Member: Syna
 
 **Repository URL:**
 
-https://github.com/Salman-S7/python-june-offline/blob/main/conditionals-loops-inputs/PRD.md
+https://github.com/Synabegum/preptrack-syna.git
 
 ### What Was Done Well
 
